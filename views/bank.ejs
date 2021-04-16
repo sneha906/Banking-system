@@ -1,0 +1,27 @@
+<%- include("header") -%>
+
+<div class="wrapper">
+    <div class="nested-wrapper">
+        <div class="content">
+            <img class="bank-image" src="/images/bank_1.gif" alt="bank.png">
+            <h1>THE GRINGOTTS BANK</h1>
+            <p>This is an Internship Project for TSF</p>
+            <h6>by - Sneha Das ❤️</h6>
+        </div>
+    </div>
+
+</div>
+
+<script >
+    $(document).ready(function(){
+        $("#footer").css("display","none");
+        $("#search-box").css("display","none");
+
+        let bodyHeight = $(document).outerHeight();
+            let footerHeight = $(".navbar").outerHeight();
+            let bodyWrapperHeight = bodyHeight-footerHeight;
+            $(".wrapper").css('height',`${bodyWrapperHeight}px`);
+    });
+</script>
+
+<%-include("footer")-%>
